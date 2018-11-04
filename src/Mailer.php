@@ -1,6 +1,7 @@
 <?php
 namespace izi\mailer;
 
+use Yii;
 use PHPMailer\PHPMailer\PHPMailer;
  
 class Mailer extends \PHPMailer\PHPMailer\PHPMailer
@@ -42,7 +43,7 @@ class Mailer extends \PHPMailer\PHPMailer\PHPMailer
         
         $this->From = $smtp['email'];
         
-        $this->FromName = isset(Yii::$app->contact['short_name']) ? Yii::$app->contact['short_name'] : DOMAIN;
+        $this->FromName = DOMAIN;
         
         $this->Host = $smtp['host'];
         
