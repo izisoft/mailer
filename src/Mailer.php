@@ -21,22 +21,22 @@ class Mailer extends \PHPMailer\PHPMailer\PHPMailer
          * Get smtp config 
          */
         
-        $emails = Yii::$app->db->getConfigs('EMAILS',false);
+        //$emails = Yii::$app->db->getConfigs('EMAILS',false);
 
         $smtp = $this->getDefautSmtp();
-        $sms = [];
-        if(isset($emails['listItem']) && !empty($emails['listItem'])){
-            foreach ($emails['listItem'] as $v){
-                if( isset($v['is_default']) && $v['is_default'] == 1 && isset($v['is_active']) && $v['is_active'] == 1){
-                    $sms = $v;
-                    break;
-                }
-            }
-            if(empty($sms)){
-                $sms = $emails['listItem'][0] ;
-            }
-            if(!empty($sms))  $smtp = $sms;
-        }
+//         $sms = [];
+//         if(isset($emails['listItem']) && !empty($emails['listItem'])){
+//             foreach ($emails['listItem'] as $v){
+//                 if( isset($v['is_default']) && $v['is_default'] == 1 && isset($v['is_active']) && $v['is_active'] == 1){
+//                     $sms = $v;
+//                     break;
+//                 }
+//             }
+//             if(empty($sms)){
+//                 $sms = $emails['listItem'][0] ;
+//             }
+//             if(!empty($sms))  $smtp = $sms;
+//         }
 
         //$this->From =   isset(Yii::$app->contact['email']) ? Yii::$app->contact['email'] : 'no-reply@'. DOMAIN;
         
