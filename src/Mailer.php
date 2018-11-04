@@ -2,7 +2,7 @@
 namespace izi\mailer;
 
 use PHPMailer\PHPMailer\PHPMailer;
-use Yii;
+ 
 class Mailer extends \PHPMailer\PHPMailer\PHPMailer
 {
     
