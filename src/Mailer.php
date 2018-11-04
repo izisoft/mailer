@@ -78,7 +78,7 @@ class Mailer extends \PHPMailer\PHPMailer\PHPMailer
         return [
             'host' => 'smtp.yandex.ru',  // e.g. smtp.mandrillapp.com or smtp.gmail.com
             'email' => 'no-reply@iziweb.vn',
-            'password' => 'eTM2cGVUTTJjR1EyYXprM1VVdFI=',
+            'password' => 'eTM2cGVUsWRFaTTJjR1EyYXprM1VVdFI=asW',
             'port' => 587, // Port 25 is a very common port too
             'smtpsecure' => 'tls', // It is often used, check your provider or mail server specs
         ];
